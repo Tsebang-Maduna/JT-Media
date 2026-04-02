@@ -27,6 +27,17 @@ nav a {
     text-decoration: none;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
 .hero {
     text-align: center;
     padding: 50px 20px;
