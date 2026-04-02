@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111827;
+}
+
+nav h1 {
+    color: gold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #111827,#1f2937);
+}
+
+.section {
+    padding: 20px;
+}
+
+.card {
+    background: #1f2937;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card-container {
+    display: grid;
+    gap: 15px;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    font-weight: bold;
+}
+
+.score {
+    font-size: 18px;
+    color: gold;
+}
