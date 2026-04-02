@@ -1,0 +1,4 @@
+[
+  { "team": "Team A", "played": 2, "wins": 2, "draws": 0, "losses": 0, "points": 6 },
+  { "team": "Team B", "played": 2, "wins": 1, "draws": 1, "losses": 0, "points": 4 }
+]
