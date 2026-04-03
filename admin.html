@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">JT-Media</a>
+    <a class="navbar-brand" href="index.html">JT-Media</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="standings.html">Standings</a></li>
-        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        <li class="nav-item"><a class="nav-link" href="fixtures.html">Fixtures</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Admin</a></li>
       </ul>
     </div>
   </div>
@@ -27,23 +30,30 @@
 <h1>Admin Panel</h1>
 
 <div class="container my-4">
-  <h2>Add Match</h2>
+  <h3 class="mb-3">Add Match</h3>
+
   <form id="match-form" class="row g-3">
-    <div class="col-md-6">
+
+    <div class="col-12 col-md-6">
       <input type="text" class="form-control" id="home" placeholder="Home Team" required>
     </div>
-    <div class="col-md-6">
+
+    <div class="col-12 col-md-6">
       <input type="text" class="form-control" id="away" placeholder="Away Team" required>
     </div>
-    <div class="col-md-3">
+
+    <div class="col-6">
       <input type="number" class="form-control" id="homeScore" placeholder="Home Score" required>
     </div>
-    <div class="col-md-3">
+
+    <div class="col-6">
       <input type="number" class="form-control" id="awayScore" placeholder="Away Score" required>
     </div>
+
     <div class="col-12">
-      <button type="submit" class="btn btn-primary w-100">Add Match</button>
+      <button class="btn btn-success w-100">Add Match</button>
     </div>
+
   </form>
 </div>
 

@@ -10,25 +10,30 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">JT-Media</a>
+    <a class="navbar-brand" href="index.html">JT-Media</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="standings.html">Standings</a></li>
-        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        <li class="nav-item"><a class="nav-link" href="fixtures.html">Fixtures</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Admin</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<h1>Fixtures & Results</h1>
+<div class="container my-4">
+  <h1 class="mb-3 text-center>Fixtures & Results</h1>
 
-<div id="fixtures-container"></div>
+  <div id="fixtures-container"></div>
+</div>
 
 <script src="js/fixtures.js"></script>
 <script type="module" src="js/firebase.js"></script>

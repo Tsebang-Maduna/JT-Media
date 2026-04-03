@@ -11,30 +11,35 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">JT-Media</a>
+    <a class="navbar-brand" href="index.html">JT-Media</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="standings.html">Standings</a></li>
-        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        <li class="nav-item"><a class="nav-link" href="fixtures.html">Fixtures</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Admin</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
     <header class="hero">
-        <h2>Welcome to JT media One-Day Tournament</h2>
+        <h1>JT media One-Day Tournament</h1>
         <p>8 Teams. One Champion</p>
     </header>
 
     <section class="section">
-        <h3>Featured Matches</h3>
-        <div id="featuredMatches" class="card-container"></div>
+        <div class="container my-4">
+            <h4 class="mb-3">🔥Featured Matches</h4>
+            <div id="featuredMatches" class="card-container"></div>
+        </div>
     </section>
 
     <script src="js/app.js"></script>
