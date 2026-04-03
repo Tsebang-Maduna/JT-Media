@@ -5,9 +5,19 @@ if (password !== "tsebza26") {
   throw new Error("Unauthorized");
 }
 
-import { db } from "./firebase.js";
+import { db, auth } from "./firebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
+//page protection
+onAuthStateChanged(auth, (user) => {
+    if(!user){
+        alert("You must log in first!");
+        window.location.href = "login.html";
+    }
+})
+
+//form logic
 const form = document.getElementById('match-form');
 
 form.addEventListener('submit', async (e) => {
