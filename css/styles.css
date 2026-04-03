@@ -107,3 +107,13 @@ tr {
   50% { transform: scale(1.1); color: #00ffcc; }
   100% { transform: scale(1); color: white; }
 }
+
+.ball {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
