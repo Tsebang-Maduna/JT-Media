@@ -1,63 +1,55 @@
-// Load matches from localStorage
-const matches = JSON.parse(localStorage.getItem('matches')) || [];
+import { db } from "./firebase.js";
+import { collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// Object to store team stats
 const table = {};
 
-// Loop through matches and calculate stats
-matches.forEach(match => {
-  const { home, away, homeScore, awayScore } = match;
+onSnapshot(collection(db, "matches"), (snapshot) => {
 
-  // Initialize teams if not exist
-  if (!table[home]) {
-    table[home] = { played: 0, wins: 0, draws: 0, losses: 0, points: 0 };
-  }
+  const tbody = document.getElementById('standings-body');
+  tbody.innerHTML = '';
 
-  if (!table[away]) {
-    table[away] = { played: 0, wins: 0, draws: 0, losses: 0, points: 0 };
-  }
+  const tempTable = {};
 
-  // Played
-  table[home].played++;
-  table[away].played++;
+  snapshot.forEach(doc => {
+    const match = doc.data();
+    const { home, away, homeScore, awayScore } = match;
 
-  // Match result logic
-  if (homeScore > awayScore) {
-    table[home].wins++;
-    table[home].points += 3;
-    table[away].losses++;
-  } else if (homeScore < awayScore) {
-    table[away].wins++;
-    table[away].points += 3;
-    table[home].losses++;
-  } else {
-    table[home].draws++;
-    table[away].draws++;
-    table[home].points += 1;
-    table[away].points += 1;
-  }
-});
+    if (!tempTable[home]) tempTable[home] = { played: 0, wins: 0, draws: 0, losses: 0, points: 0 };
+    if (!tempTable[away]) tempTable[away] = { played: 0, wins: 0, draws: 0, losses: 0, points: 0 };
 
-// Convert object → array and sort by points
-const sorted = Object.entries(table).sort((a, b) => b[1].points - a[1].points);
+    tempTable[home].played++;
+    tempTable[away].played++;
 
-// Get table body
-const tbody = document.getElementById('standings-body');
+    if (homeScore > awayScore) {
+      tempTable[home].wins++;
+      tempTable[home].points += 3;
+      tempTable[away].losses++;
+    } else if (homeScore < awayScore) {
+      tempTable[away].wins++;
+      tempTable[away].points += 3;
+      tempTable[home].losses++;
+    } else {
+      tempTable[home].draws++;
+      tempTable[away].draws++;
+      tempTable[home].points += 1;
+      tempTable[away].points += 1;
+    }
+  });
 
-// Clear existing rows
-tbody.innerHTML = '';
+  const sorted = Object.entries(tempTable).sort((a, b) => b[1].points - a[1].points);
 
-// Render table
-sorted.forEach(([team, stats], index) => {
-  tbody.innerHTML += `
-    <tr>
-      <td>${index + 1}</td>
-      <td>${team}</td>
-      <td>${stats.played}</td>
-      <td>${stats.wins}</td>
-      <td>${stats.draws}</td>
-      <td>${stats.losses}</td>
-      <td>${stats.points}</td>
-    </tr>
-  `;
+  sorted.forEach(([team, stats], index) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${index + 1}</td>
+        <td>${team}</td>
+        <td>${stats.played}</td>
+        <td>${stats.wins}</td>
+        <td>${stats.draws}</td>
+        <td>${stats.losses}</td>
+        <td>${stats.points}</td>
+      </tr>
+    `;
+  });
+
 });
