@@ -10,7 +10,7 @@ function showFeatured(matches) {
 
     if (!container) return;
 
-    matches.slice(0, 2).forEach(match => {
+    matches.slice(0, 3).forEach(match => {
         const div = document.createElement("div");
         div.classList.add("card");
 
