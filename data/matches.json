@@ -1,20 +1,29 @@
 [
   {
-    "teamA": "Lions FC",
-    "teamB": "Eagles FC",
-    "date": "2026-04-01",
+    "teamA": "Spain FC",
+    "teamB": "Redbat FC",
+    "date": "2026-06-10",
     "time": "15:00",
     "scoreA": null,
     "scoreB": null,
     "status": "upcoming"
   },
   {
-    "teamA": "Tigers FC",
-    "teamB": "Sharks FC",
-    "date": "2026-04-01",
+    "teamA": "Makazana FC",
+    "teamB": "France",
+    "date": "2026-06-10",
     "time": "18:00",
-    "scoreA": 2,
-    "scoreB": 1,
-    "status": "completed"
+    "scoreA": null,
+    "scoreB": null,
+    "status": "upcoming"
+  },
+  {
+    "teamA": "Jabulane.T FC",
+    "teamB": "Fikile.C FC",
+    "date": "2026-06-11",
+    "time": "10:00",
+    "scoreA": null,
+    "scoreB": null,
+    "status": "upcoming"
   }
 ]
