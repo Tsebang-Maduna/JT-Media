@@ -1,4 +1,4 @@
-fetch('data/fixtures.json')
+/*fetch('data/fixtures.json')
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById('fixtures-container');
@@ -13,3 +13,28 @@ fetch('data/fixtures.json')
       `;
     });
   });
+  */
+import { db } from "./firebase.js";
+import { collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const container = document.getElementById("fixtures-container");
+
+onSnapshot(collection(db, "matches"), (snapshot) => {
+  container.innerHTML = "";
+
+  snapshot.forEach(doc => {
+    const match = doc.data();
+
+    container.innerHTML += `
+      <div class="match-card">
+        <div class="match-teams">
+          <span>${match.home}</span>
+          <span>${match.away}</span>
+        </div>
+        <div class="match-score">
+          ${match.homeScore} - ${match.awayScore}
+        </div>
+      </div>
+    `;
+  });
+});

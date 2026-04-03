@@ -70,3 +70,40 @@ th, td {
   display: flex;
   justify-content: space-between;
 }
+/* Top teams (qualification) */
+.top-team {
+  background: rgba(0, 255, 200, 0.1);
+}
+
+/* Relegation */
+.relegation {
+  background: rgba(255, 0, 0, 0.15);
+}
+
+
+/* Fade in rows */
+tr {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Score pulse */
+.match-score {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); color: white; }
+  50% { transform: scale(1.1); color: #00ffcc; }
+  100% { transform: scale(1); color: white; }
+}
