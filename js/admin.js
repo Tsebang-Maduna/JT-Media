@@ -1,9 +1,9 @@
-const password = prompt("Enter admin password:");
+/*const password = prompt("Enter admin password:");
 
 if (password !== "tsebza26") {
   alert("Access denied");
   throw new Error("Unauthorized");
-}
+}*/
 
 import { db, auth } from "./firebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
