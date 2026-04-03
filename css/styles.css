@@ -1,76 +1,72 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0f1a;
-    color: white;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0f1c;
+  color: #fff;
 }
 
+/* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: #111827;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  padding: 15px 30px;
 }
 
-nav h1 {
-    color: gold;
+nav h2 {
+  color: #00ffcc;
 }
 
 nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #111827, #1f2937);
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+/* TABLE */
 table {
-  width: 80%;
+  width: 90%;
+  margin: 30px auto;
   border-collapse: collapse;
-  margin-top: 20px;
+  background: #111827;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #00ffcc;
+  color: black;
 }
 
 th, td {
-  padding: 10px;
-  border-bottom: 1px solid #333;
+  padding: 12px;
+  text-align: center;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to right, #111827,#1f2937);
-}
-
-.section {
-    padding: 20px;
-}
-
-.card {
-    background: #1f2937;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.card-container {
-    display: grid;
-    gap: 15px;
-}
-
+/* MATCH CARDS */
 .match {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.team {
-    font-weight: bold;
-}
-
-.score {
-    font-size: 18px;
-    color: gold;
+  background: #111827;
+  margin: 15px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
 }

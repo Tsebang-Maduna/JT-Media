@@ -1,4 +1,5 @@
 [
-  { "home": "Team A", "away": "Team B", "score": "1 - 0", "time": "15:00" },
-  { "home": "Team C", "away": "Team D", "score": "-", "time": "17:00" }
+  { "home": "Team A", "away": "Team B", "homeScore": 2, "awayScore": 1 },
+  { "home": "Team C", "away": "Team D", "homeScore": 0, "awayScore": 0 },
+  { "home": "Team A", "away": "Team C", "homeScore": 1, "awayScore": 3 }
 ]
